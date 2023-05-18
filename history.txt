@@ -1,5 +1,9 @@
 -- Comandos da parte 1 --
 docker image build . -t my-caddy-image
 docker container run --name my-caddy-container -p 8080:80 -d my-caddy-image
+
+-- Comandos da parte 2 --
 docker container stop my-caddy-container
 docker container rm my-caddy-container
+docker image build . -t my-caddy-image
+sudo docker container run --name my-caddy-container -v $(pwd)/pages:/usr/src/pages -p 8080:80 -d my-caddy-image
