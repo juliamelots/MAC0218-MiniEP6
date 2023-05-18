@@ -1,6 +1,4 @@
 FROM caddy:alpine
 
-ENV CADDY_PASSWORD=secret
-
-COPY ./Caddyfile /etc/caddy/Caddyfile
-COPY ./pages /usr/src/
+COPY Caddyfile /etc/caddy/Caddyfile
+COPY pages /usr/src/pages
